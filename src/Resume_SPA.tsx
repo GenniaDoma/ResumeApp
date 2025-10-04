@@ -1,7 +1,7 @@
 import React from "react";
 import type { FC } from "react";
 
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Mail, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 // Vanilla React + TypeScript wireframe
@@ -75,6 +75,7 @@ const containerStyle: React.CSSProperties = {
   margin: "0 auto",
   background: "#fafafa",
   color: "#0a0a0a",
+  fontFamily: "'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
   justifyContent: "center",
   display: "flex",
   flexDirection: "column",
@@ -192,53 +193,76 @@ export default function ResumeWireframe() {
                       }}
                       style={{ width: 120, height: 120, borderRadius: "50%", objectFit: "cover" }}
                     />
+                    <div style={{ fontSize: 32, fontWeight: 800, marginTop: 8, marginBottom: 2, letterSpacing: 0.5, color: "#222" }}>Jonas Groff</div>
+                    <div style={{ fontSize: 18, fontWeight: 600, color: '#374151', marginBottom: 2, letterSpacing: 0.2 }}>
+                      Sr. Director of Software | Systems Architect
+                    </div>
                     <div style={{ fontSize: 16, fontWeight: 500 }}>Pittsburgh, PA</div>
-                    <div style={{ fontSize: 14, color: "#6b7280" }}>jonasgroff@gmail.com</div>
+                    
                     <div style={{ display: "flex", gap: 12, marginTop: 8 }}>
                       <Button
+                        style={{ padding: "14px 28px", fontSize: 18, minWidth: 140, display: "flex", alignItems: "center", gap: 10 }}
                         onClick={() =>
                           (window.location.href =
                             "mailto:jonasgroffl@gmail.com?subject=Website Connection&body=Hi%20Jonas%2C%20I%27d%20love%20to%20connect%20about...")
                         }
                         aria-label="Email Me"
                       >
+                        <Mail size={22} style={{ marginRight: 8 }} />
                         Email Me
                       </Button>
-                      <Button onClick={() => window.open("https://www.linkedin.com/in/jonasgroff", "_blank")} aria-label="Open LinkedIn">
+                      <Button
+                        style={{ padding: "14px 28px", fontSize: 18, minWidth: 140, display: "flex", alignItems: "center", gap: 10 }}
+                        onClick={() => window.open("https://www.linkedin.com/in/jonasgroff", "_blank")}
+                        aria-label="Open LinkedIn"
+                      >
+                        <Linkedin size={22} style={{ marginRight: 8 }} />
                         LinkedIn
                       </Button>
                     </div>
                   </div>
                 ):s.id === "experience" ? (
                   <div style={placeholderStyle}>
-                    <div style={{ borderBottom: "1px solid #e5e7eb", padding: "8px 0", marginTop: 8 }}>
-                      <strong>Matthews Marking Systems [Marking and Coding Products] – February 2024 to Present</strong>
-                      <div style={{ marginLeft: 20, marginTop: 4 }}>
-                        <div>Sr Director of Software Engineering – July 2025 to Present</div>
-                        <div>Director of Software Engineering – February 2024 to July 2025</div>
-                      </div>
-                    </div>
+                            <div style={{ borderBottom: "1px solid #e5e7eb", padding: "8px 0", marginTop: 8 }}>
+                              <strong>Matthews Marking Systems [Marking and Coding Products] – February 2024 to Present</strong>
+                              <div style={{ display: "flex", alignItems: "center", marginTop: 4 }}>
+                                <img src="/matthews_logo.jpg" alt="Matthews Logo" style={{ width: 75, height: 75, marginRight: 16, borderRadius: 8, objectFit: "contain", background: "#f3f4f6" }} />
+                                <div>
+                                  <div>Sr Director of Software Engineering – July 2025 to Present</div>
+                                  <div>Director of Software Engineering – February 2024 to July 2025</div>
+                                </div>
+                              </div>
+                            </div>
                     <div style={{ borderBottom: "1px solid #e5e7eb", padding: "8px 0", marginTop: 8 }}>
                       <strong>Kohler [Residential Power Products] – August 2021 to February 2024</strong>
-                      <div style={{ marginLeft: 20, marginTop: 4 }}>
-                        <div>Software Development Manager</div>
+                      <div style={{ display: "flex", alignItems: "center", marginTop: 4 }}>
+                        <img src="/Kohler.png" alt="Kohler Logo" style={{ width: 75, height: 75, marginRight: 16, borderRadius: 8, objectFit: "contain", background: "#f3f4f6" }} />
+                        <div>
+                          <div>Software Development Manager</div>
+                        </div>
                       </div>
                     </div>
                     <div style={{ borderBottom: "1px solid #e5e7eb", padding: "8px 0", marginTop: 8 }}>
                       <strong>GEA Group [Industrial Refrigeration Controls] – April 2012 to August 2021</strong>
-                      <div style={{ marginLeft: 20, marginTop: 4 }}>
-                        <div>Director – Automation Controls and Tools Development – Sept 2019 to Aug 2021</div>
-                        <div>Sr. Software Engineer III - Team Lead – March 2017 to Sept 2019</div>
-                        <div>Software Engineer III – May 2015 to March 2017</div>
-                        <div>Software Engineer II – April 2012 to May 2015</div>
+                      <div style={{ display: "flex", alignItems: "center", marginTop: 4 }}>
+                        <img src="/GEA.png" alt="GEA Logo" style={{ width: 75, height: 75, marginRight: 16, borderRadius: 8, objectFit: "contain", background: "#f3f4f6" }} />
+                        <div>
+                          <div>Director – Automation Controls and Tools Development – Sept 2019 to Aug 2021</div>
+                          <div>Sr. Software Engineer III - Team Lead – March 2017 to Sept 2019</div>
+                          <div>Software Engineer III – May 2015 to March 2017</div>
+                          <div>Software Engineer II – April 2012 to May 2015</div>
+                        </div>
                       </div>
                     </div>
                     <div style={{ padding: "8px 0", marginTop: 8 }}>
                       <strong>Mauell [Mission Critical Control] – March 2006 to April 2012</strong>
-                      <div style={{ marginLeft: 20, marginTop: 4 }}>
-                        <div>Lead Design Engineer – July 2010 to April 2012</div>
-                        <div>Electrical Engineer – February 2008 to July 2010</div>
-                        <div>Application Engineer – March 2006 to February 2008</div>
+                      <div style={{ display: "flex", alignItems: "center", marginTop: 4 }}>
+                        <img src="/mauell.png" alt="Mauell Logo" style={{ width: 75, height: 75, marginRight: 16, borderRadius: 8, objectFit: "contain", background: "#f3f4f6" }} />
+                        <div>
+                          <div>Lead Design Engineer – July 2010 to April 2012</div>
+                          <div>Electrical Engineer – February 2008 to July 2010</div>
+                          <div>Application Engineer – March 2006 to February 2008</div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -274,6 +298,9 @@ export default function ResumeWireframe() {
                     <div style={{ padding: "8px 0", marginTop: 8, marginBottom: 8 }}>
                       <strong>Databases & Data Services:</strong> SQL (12yr), Cosmos DB (2yr)
                     </div>
+                    <div style={{ borderBottom: "1px solid #e5e7eb", padding: "8px 0", marginTop: 8 }}>
+                      <strong>Delivery Methodologies:</strong> Scrum (10yr), SAFe (2yr), Kanban (3yr), Waterfall (10yr)
+                    </div>
                   </div>
                 ) : s.id === "accomplishments" ? (
                   <div style={placeholderStyle}>
@@ -302,7 +329,7 @@ export default function ResumeWireframe() {
                       </ul>
                     </div>
                     <div style={{ padding: "8px 0", marginTop: 8, marginBottom: 8 }}>
-                      <strong>Automation Controls and Tools Development Director – GEA Group</strong>
+                      <strong>Director of Automation Controls and Tools Development – GEA Group</strong>
                       <ul style={{ marginTop: 4, marginBottom: 8, paddingLeft: 20, listStyleType: "disc" }}>
                         <li>Designed and launched a Linux-based embedded controls platform, reducing deployments costs by 50% across deployments.</li>
                         <li>Delivered greater than 1% EBITDA point in annual divisional savings through Value Analysis / Value Engineering initiatives.</li>
@@ -353,27 +380,9 @@ export default function ResumeWireframe() {
           </Button>
         </div>
       </main>
-
       {/* Footer */}
       <footer style={footerStyle}>
-        <p style={{ margin: 0 }}>Jonas Groff</p>
-        <ul style={{ marginTop: 8, paddingLeft: 18 }}>
-          <li>Email: jonasgroff@gmail.com</li>
-        </ul>
-        <div style={{ display: "flex", gap: 12, marginTop: 8 }}>
-          <Button
-            onClick={() =>
-              (window.location.href =
-                "mailto:jonasgroffl@gmail.com?subject=Website Connection&body=Hi%20Jonas%2C%20I%27d%20love%20to%20connect%20about...")
-            }
-            aria-label="Email Me"
-          >
-            Email Me
-          </Button>
-          <Button onClick={() => window.open("https://www.linkedin.com/in/jonasgroff", "_blank")} aria-label="Open LinkedIn">
-            LinkedIn
-          </Button>
-        </div>
+        
       </footer>
     </div>
   );
